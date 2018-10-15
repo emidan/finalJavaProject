@@ -76,7 +76,7 @@ public class BusinessBuilder extends BodyTagSupport {
 
   private static void printNewForm(JspWriter out) throws IOException {
 
-  	out.println("<b>New Business Entry Form</b>");
+    out.println("<b>New Business Entry Form</b>");
     out.println("<br /> <br />");
     out.println("<form method='post' action='NewBusinessForm.jsp'>");
     out.println("<label> Business Name: </label>");
@@ -111,7 +111,7 @@ public class BusinessBuilder extends BodyTagSupport {
 
     	results = stmt.executeQuery("SELECT BUSINESS_ID, BUSINESS_NAME, ADD_LINE1, ADD_LINE2, CITY, STATE, ZIP_CODE FROM VB_BUSINESS");
 
-    	out.println("<table border=2>");
+      out.println("<table border=2>");
       out.println("<tr bgcolor='#189641'>");
       out.println("<th> Business ID </th>");
       out.println("<th> Business Name </th>");

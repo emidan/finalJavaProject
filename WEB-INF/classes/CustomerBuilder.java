@@ -74,7 +74,7 @@ public class CustomerBuilder extends BodyTagSupport {
 
   private static void printNewForm(JspWriter out) throws IOException {
 
-  	out.println("<b>New Customer Entry Form</b>");
+    out.println("<b>New Customer Entry Form</b>");
     out.println("<br /> <br />");
     out.println("<form method='post' action='NewCustomerForm.jsp'>");
     out.println("<label> Customer Name: </label>");
@@ -97,7 +97,7 @@ public class CustomerBuilder extends BodyTagSupport {
 
     	results = stmt.executeQuery("SELECT CUSTOMER_ID, CUSTOMER_NAME, EMAIL FROM VB_CUSTOMER");
 
-    	out.println("<table border=2>");
+      out.println("<table border=2>");
       out.println("<tr bgcolor='#189641'>");
       out.println("<th> Customer ID </th>");
       out.println("<th> Customer Name </th>");

@@ -124,7 +124,7 @@ public class VoucherBuilder extends BodyTagSupport {
 
   	businessList = getBusinessList();
 
-  	out.println("<b>New Voucher Entry Form</b>");
+    out.println("<b>New Voucher Entry Form</b>");
     out.println("<br /> <br />");
     out.println("<form method='post' action='NewVoucherForm.jsp'>");
     out.println("<label> Business: </label>");
@@ -165,7 +165,7 @@ public class VoucherBuilder extends BodyTagSupport {
     	results = stmt.executeQuery("SELECT VOUCHER_ID, B.BUSINESS_NAME, DEAL_DETAILS, DEAL_DETAILS2, EFFECTIVE_DATE, EXPIRATION_DATE FROM VB_VOUCHER "
     		+ "JOIN VB_BUSINESS B ON VB_VOUCHER.BUSINESS_ID = B.BUSINESS_ID");
 
-    	out.println("<table border=2>");
+      out.println("<table border=2>");
       out.println("<tr bgcolor='#189641'>");
       out.println("<th> Voucher ID </th>");
       out.println("<th> Business Name </th>");
