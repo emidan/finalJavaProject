@@ -9,9 +9,9 @@
     </title>
   </head>
   <body>
-  	<div>
+    <div>
 
-  		<% 
+      <% 
       if(request.getMethod().equals("POST")) {
       %>
 
