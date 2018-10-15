@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+  <web-app>
+
+    <servlet>
+      <servlet-name>SetupVBServlet</servlet-name>
+      <servlet-class>maint.SetupVBServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>SetupVBServlet</servlet-name>
+      <url-pattern>/SetupVB</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>DestroyVBServlet</servlet-name>
+      <servlet-class>maint.DestroyVBServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>DestroyVBServlet</servlet-name>
+      <url-pattern>/DestroyVB</url-pattern>
+    </servlet-mapping>
+
+    <taglib>
+       <taglib-uri>
+         /BusinessTag
+       </taglib-uri>
+       <taglib-location>
+         /WEB-INF/taglibrary.tld
+       </taglib-location>
+    </taglib>
+
+    <taglib>
+       <taglib-uri>
+         /CustomerTag
+       </taglib-uri>
+       <taglib-location>
+         /WEB-INF/taglibrary.tld
+       </taglib-location>
+    </taglib>
+
+    <taglib>
+       <taglib-uri>
+         /VoucherTag
+       </taglib-uri>
+       <taglib-location>
+         /WEB-INF/taglibrary.tld
+       </taglib-location>
+    </taglib>
+
+  </web-app>
