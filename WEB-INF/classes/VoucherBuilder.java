@@ -13,15 +13,15 @@ import java.util.List;
 
 public class VoucherBuilder extends BodyTagSupport {
 
-	public static Connection connect = null;
-	public static Statement stmt = null;
+  public static Connection connect = null;
+  public static Statement stmt = null;
   public static ResultSet results = null;
   public static List<String> businessList = new ArrayList<String>();
   VB_Voucher voucher = null;
 
   public void setNewVoucher(VB_Voucher voucher) {
 
-  	this.voucher = voucher;
+    this.voucher = voucher;
   }
 
   public int doEndTag() throws JspException {

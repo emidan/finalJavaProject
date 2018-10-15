@@ -11,14 +11,14 @@ import oracle.jdbc.OracleResultSetMetaData;
 
 public class BusinessBuilder extends BodyTagSupport {
 
-	public static Connection connect = null;
-	public static Statement stmt = null;
+  public static Connection connect = null;
+  public static Statement stmt = null;
   public static ResultSet results = null;
   VB_Business business = null;
 
   public void setNewBusiness(VB_Business business) {
 
-  	this.business = business;
+    this.business = business;
   }
 
   public int doEndTag() throws JspException {
