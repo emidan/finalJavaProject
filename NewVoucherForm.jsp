@@ -6,6 +6,7 @@
     <title>
       VoucherBank New Voucher Entry
     </title>
+    <link rel='stylesheet' href='styles/VB_Styles.css'>
   </head>
   <body>
     <div>

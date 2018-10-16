@@ -26,6 +26,16 @@
       <url-pattern>/DestroyVB</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+      <servlet-name>DataServlet</servlet-name>
+      <servlet-class>maint.DataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>DataServlet</servlet-name>
+      <url-pattern>/viewData</url-pattern>
+    </servlet-mapping>
+
     <taglib>
        <taglib-uri>
          /BusinessTag

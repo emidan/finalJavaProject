@@ -78,10 +78,10 @@ public class CustomerBuilder extends BodyTagSupport {
     out.println("<br /> <br />");
     out.println("<form method='post' action='NewCustomerForm.jsp'>");
     out.println("<label> Customer Name: </label>");
-    out.println("<input type='text' name='name' size='60' maxlength='50' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='name' size='60' maxlength='50'>");
     out.println("<br /> <br />");
     out.println("<label> Customer Email: </label>");
-    out.println("<input type='email' name='email' size='30' maxlength='30' style='background-color: #3CBC8D;'>");
+    out.println("<input type='email' name='email' size='30' maxlength='30'>");
     out.println("<br /> <br /> <br />");
     out.println("<input type='submit' name='submit' value='Submit'>");
     out.println("</form>");
@@ -95,10 +95,10 @@ public class CustomerBuilder extends BodyTagSupport {
 
     try {
 
-    	results = stmt.executeQuery("SELECT CUSTOMER_ID, CUSTOMER_NAME, EMAIL FROM VB_CUSTOMER");
+    	results = stmt.executeQuery("SELECT CUSTOMER_ID, CUSTOMER_NAME, EMAIL FROM VB_CUSTOMER ORDER BY CUSTOMER_ID ASC");
 
       out.println("<table border=2>");
-      out.println("<tr bgcolor='#189641'>");
+      out.println("<tr>");
       out.println("<th> Customer ID </th>");
       out.println("<th> Customer Name </th>");
       out.println("<th> Customer Email </th>");
@@ -106,7 +106,7 @@ public class CustomerBuilder extends BodyTagSupport {
 
       while(results.next()) {
 
-        out.println("<tr bgcolor='#42bacc'>");
+        out.println("<tr>");
 
         for(int i = 1; i <= results.getMetaData().getColumnCount(); i++) {
 

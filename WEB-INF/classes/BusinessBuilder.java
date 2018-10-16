@@ -80,22 +80,22 @@ public class BusinessBuilder extends BodyTagSupport {
     out.println("<br /> <br />");
     out.println("<form method='post' action='NewBusinessForm.jsp'>");
     out.println("<label> Business Name: </label>");
-    out.println("<input type='text' name='name' size='60' maxlength='50' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='name' size='60' maxlength='50'>");
     out.println("<br /> <br />");
     out.println("<label> Address Line 1: </label>");
-    out.println("<input type='text' name='addr1' size='30' maxlength='30' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='addr1' size='30' maxlength='30'>");
     out.println("<br /> <br />");
     out.println("<label> Address Line 2: </label>");
-    out.println("<input type='text' name='addr2' size='30' maxlength='30' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='addr2' size='30' maxlength='30'>");
     out.println("<br /> <br />");
     out.println("<label> City: </label>");
-    out.println("<input type='text' name='city' size='30' maxlength='30' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='city' size='30' maxlength='30'>");
     out.println("<br /> <br />");
     out.println("<label> State: </label>");
-    out.println("<input type='text' name='state' size='5' maxlength='2' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='state' size='5' maxlength='2'>");
     out.println("<br /> <br />");
     out.println("<label> Postal Code: </label>");
-    out.println("<input type='text' name='zip' size='10' maxlength='5' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='zip' size='10' maxlength='5'>");
     out.println("<br /> <br /> <br />");
     out.println("<input type='submit' name='submit' value='Submit'>");
     out.println("</form>");
@@ -109,10 +109,10 @@ public class BusinessBuilder extends BodyTagSupport {
 
     try {
 
-    	results = stmt.executeQuery("SELECT BUSINESS_ID, BUSINESS_NAME, ADD_LINE1, ADD_LINE2, CITY, STATE, ZIP_CODE FROM VB_BUSINESS");
+    	results = stmt.executeQuery("SELECT BUSINESS_ID, BUSINESS_NAME, ADD_LINE1, ADD_LINE2, CITY, STATE, ZIP_CODE FROM VB_BUSINESS ORDER BY BUSINESS_ID ASC");
 
       out.println("<table border=2>");
-      out.println("<tr bgcolor='#189641'>");
+      out.println("<tr>");
       out.println("<th> Business ID </th>");
       out.println("<th> Business Name </th>");
       out.println("<th> Address Line 1 </th>");
@@ -124,7 +124,7 @@ public class BusinessBuilder extends BodyTagSupport {
 
       while(results.next()) {
 
-        out.println("<tr bgcolor='#42bacc'>");
+        out.println("<tr'>");
 
         for(int i = 1; i <= results.getMetaData().getColumnCount(); i++) {
 

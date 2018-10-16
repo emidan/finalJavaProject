@@ -128,27 +128,27 @@ public class VoucherBuilder extends BodyTagSupport {
     out.println("<br /> <br />");
     out.println("<form method='post' action='NewVoucherForm.jsp'>");
     out.println("<label> Business: </label>");
-    out.println("<select name='business'>");
+    out.println("<select class='optionColor' name='business'>");
 
     for(int i = 0; i < businessList.size(); i++) {
 
     	String name = (String)businessList.get(i);
-    	out.println("<option value='" + name + "'>" + name + "</option>");
+    	out.println("<option class='optionColor' value='" + name + "'>" + name + "</option>");
     }
 
     out.println("</select>");
     out.println("<br /> <br />");
     out.println("<label> Details: </label>");
-    out.println("<input type='text' name='dtls1' size='60' maxlength='50' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='dtls1' size='60' maxlength='50'>");
     out.println("<br /> <br />");
     out.println("<label> Additional Details: </label>");
-    out.println("<input type='text' name='dtls2' size='60' maxlength='50' style='background-color: #3CBC8D;'>");
+    out.println("<input type='text' name='dtls2' size='60' maxlength='50'>");
     out.println("<br /> <br />");
     out.println("<label> Effective Date: </label>");
-    out.println("<input type='date' name='effDt' style='background-color: #3CBC8D;'>");
+    out.println("<input type='date' name='effDt'>");
     out.println("<br /> <br />");
     out.println("<label> Expiration Date: </label>");
-    out.println("<input type='date' name='exprDt' size='30' maxlength='30' style='background-color: #3CBC8D;'>");
+    out.println("<input type='date' name='exprDt' size='30' maxlength='30'>");
     out.println("<br /> <br /> <br />");
     out.println("<input type='submit' name='submit' value='Submit'>");
     out.println("</form>");
@@ -163,10 +163,10 @@ public class VoucherBuilder extends BodyTagSupport {
     try {
 
     	results = stmt.executeQuery("SELECT VOUCHER_ID, B.BUSINESS_NAME, DEAL_DETAILS, DEAL_DETAILS2, EFFECTIVE_DATE, EXPIRATION_DATE FROM VB_VOUCHER "
-    		+ "JOIN VB_BUSINESS B ON VB_VOUCHER.BUSINESS_ID = B.BUSINESS_ID");
+    		+ "JOIN VB_BUSINESS B ON VB_VOUCHER.BUSINESS_ID = B.BUSINESS_ID ORDER BY VOUCHER_ID ASC");
 
       out.println("<table border=2>");
-      out.println("<tr bgcolor='#189641'>");
+      out.println("<tr>");
       out.println("<th> Voucher ID </th>");
       out.println("<th> Business Name </th>");
       out.println("<th> Deal Details </th>");
@@ -177,7 +177,7 @@ public class VoucherBuilder extends BodyTagSupport {
 
       while(results.next()) {
 
-        out.println("<tr bgcolor='#42bacc'>");
+        out.println("<tr>");
 
         for(int i = 1; i <= results.getMetaData().getColumnCount(); i++) {
 

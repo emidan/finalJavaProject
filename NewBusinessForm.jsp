@@ -7,6 +7,7 @@
     <title>
       VoucherBank New Business Entry
     </title>
+    <link rel='stylesheet' href='styles/VB_Styles.css'>
   </head>
   <body>
     <div>

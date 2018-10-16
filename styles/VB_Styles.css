@@ -1,0 +1,66 @@
+
+body {
+    background-color: #BDADEA;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12pt;
+    margin-left: 2em;
+
+}
+
+div.title {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16pt;
+	font-style: italic;
+	margin-left: -0.5em;
+}
+
+div.maint {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14pt;
+	margin-top: 2.5em;
+	font-style: italic;
+}
+
+td {
+	background: #A37871;
+}
+
+th {
+	background: #A38560;
+}
+
+input {
+	background: #C6A15B;
+}
+
+input[type="submit"]{
+	background: #D3D3D3;
+}
+
+img{
+	max-width:100%;
+  max-height:100%;
+}
+
+.column {
+	float: left;
+}
+
+.left {
+	width: 35%;
+}
+
+.right {
+	margin-top: 3em;
+	width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.optionColor{
+	background: #C6A15B;
+}
